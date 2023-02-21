@@ -1,0 +1,23 @@
+/* box style row style table style 
+display style */
+
+.topDiv {
+    border: solid black 1px;
+    width: 98%;
+    height: 15vh
+  }
+  .topSpace {
+   border: solid black 1px;
+   width: 98%;
+   height: 5vh;
+  }
+  .tableContainer {
+    border: solid black 1px;
+    width: 98%;
+    height: 55vh;
+  }
+  .bottomContainer {
+    border: solid black 1px;
+    width: 98%;
+    height: 25vh;
+  }
