@@ -19,6 +19,9 @@ function startGame() {
     document.getElementsByClassName('mineField').appendChild(createTable());
 }
 // start game and place bombs randomly append to display
+function cellID(i,j) {
+    return 'cell-' + i + '-' + j;
+}
 // fucntion to create table 
 // place single bomb 
 // hit bomb "you loose"

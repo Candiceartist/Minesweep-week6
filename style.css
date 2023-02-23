@@ -34,7 +34,7 @@ h2, h3{
 }
 
 
-.field table {
+.field_table {
     border-collapse: collapse;
     font-size: 150%;
     font-family: san-serif;
@@ -42,7 +42,7 @@ h2, h3{
     display: inline-block;
 }
 
-.field table td {
+.field_table td {
     background-color: rgb(250, 171, 204);
     width: 60px;
     min-width: 60px;
