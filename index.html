@@ -9,14 +9,19 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <div id="box">
-    <h2>MINESWEEPER!</h2><hr><br><br>
-       <div id="field"></div>
-       <br>
-     <div id="lost" style="display: none;">
-       <h3>You got bombed!</h3>
-       <button id="new-game-button" type="button" onclick="reload()">Start Again</button>
-     </div>         
- </div>
+        <h2>MINESWEEPER!</h2><hr><br><br>
+           <div class="intro">Click on a random square while avoiding the explosives.
+        If the first player clicks on a safe area, the square will either  be blank or will contain a number from 1 to 8. Your mission if you decide to accept it is to decide where the mine is in relation to the number. If you fail the mission is over </div>
+              <div class="games">
+                 <div id="field"></div>
+                  <br>
+                 <div id="lost" style="display: none;">
+                 <h3>Explosion! Mission Over!</h3>
+                 <button id="new-game-button" type="button" onclick="reload()">Start Again</button>
+                 </div>
+       </div>   
+    </div>
+ 
 
     <script src="app.js" async defer></script>
   </body>

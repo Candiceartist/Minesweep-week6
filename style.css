@@ -4,64 +4,17 @@ body{
     background-color: rgb(251, 238, 240);
 }
 
-h2, h3{
-    color: whitesmoke;
-}
 
 #box {
     text-align: center;
 }
-
-
-.topDiv {
-    border: solid black 1px;
-    width: 98%;
-    height: 80px;
-}
-  
-  
-.topSpace {
-   border: solid black 1px;
-   width: 98%;
-   height: 50px;
-}
-
-.mineField {
-    border: solid black 1px;
-    width: 98%;
-    height: 55vh;
-}
-
-
-.bottomContainer {
-    border: solid black 1px;
-    width: 98%;
-    height: 5vh;
-}
-  
+ 
 
 h2, h3{
     color: rgb(62, 61, 61);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-
-.field_table {
-    border-collapse: collapse;
-    font-size: 150%;
-    font-family: san-serif;
-    font-weight: bold;
-    display: inline-block;
-}
-
-.field_table, th, td {
-    background-color: lightcoral;
-    width: 60px;
-    min-width: 60px;
-    height: 60px;
-    min-height: 60px;
-    border: 1px solid rgb(38, 37, 37);    
-}
 
 .buttonContainer {
     border: solid black 1px;
@@ -110,4 +63,14 @@ button:hover {
     height: 30px;
     min-height: 30px;
     border: 1px solid rgb(184, 96, 7);    
+}
+.intro {
+    /* border: solid black 1px; */
+    width: 70%;
+    height: 100px;
+    text-align: justify;
+    margin-bottom: 10px;
+    margin-left: 90px;
+    font-family:Arial, Helvetica, sans-serif
+    
 }
