@@ -85,3 +85,10 @@ justify-content: center;
     height: 120px;
     margin: 10px;
 }
+
+.bottomContainer {
+ border: solid black 1px;
+ height: 150px;
+ display: flex;
+ justify-content: center;
+}
