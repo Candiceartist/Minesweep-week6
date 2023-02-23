@@ -11,14 +11,16 @@
   <div id="box">
         <h2>MINESWEEPER!</h2><hr><br><br>
            <div class="intro">Click on a random square while avoiding the explosives.
-        If the first player clicks on a safe area, the square will either  be blank or will contain a number from 1 to 8. Your mission if you decide to accept it is to decide where the mine is in relation to the number. If you fail the mission is over </div>
+        If the first player clicks on a safe area, the square will either  be blank or will contain a number from 1 to 8 showing how many explosives are near that particular square. Your mission if you decide to accept it is to expose all blank sqaures. If you fail the mission is over. <br><br>Take turns with a friend for extra suspense. Hit your respective button after each turn. The player with the most points at the end of game wins!</div>
               <div class="games">
+                <div class="counter"><div><h2 class="points">"0"</h2><button onclick="player1Counter()" class="player"></button></div><h3>"P1"</h3></div>
                  <div id="field"></div>
+                 <div class="counter"><div ><h2 class="points2">"0"</h2><button onclick="player2Counter()" class="player"></button></div><h3 >"P2"</h3></div>
                   <br>
                  <div id="lost" style="display: none;">
                  <h3>Explosion! Mission Over!</h3>
-                 <button id="new-game-button" type="button" onclick="reload()">Start Again</button>
-                 </div>
+                 <button id="new-game-button" type="button" onclick="reload()">Start Over</button>
+                </div>
        </div>   
     </div>
  

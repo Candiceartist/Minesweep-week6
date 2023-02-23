@@ -450,4 +450,16 @@ window.addEventListener('load', function() {
     startGame();
 });
 
+// counter for players
 
+let count = 1;
+
+const player1Counter = () => {
+    let points = document.querySelector('.points')
+ points.innerHTML = count++;
+}
+
+const player2Counter = () => {
+    let points = document.querySelector('.points2')
+ points.innerHTML = count++;
+}
