@@ -4,20 +4,80 @@ display style */
 .topDiv {
     border: solid black 1px;
     width: 98%;
-    height: 15vh
-  }
-  .topSpace {
+    height: 80px;
+}
+  
+  
+.topSpace {
    border: solid black 1px;
    width: 98%;
-   height: 5vh;
-  }
-  .tableContainer {
+   height: 50px;
+}
+
+.mineField {
     border: solid black 1px;
     width: 98%;
     height: 55vh;
-  }
-  .bottomContainer {
+}
+
+
+.bottomContainer {
     border: solid black 1px;
     width: 98%;
-    height: 25vh;
-  }
+    height: 5vh;
+}
+  
+
+h2, h3{
+    color: rgb(62, 61, 61);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+.field table {
+    border-collapse: collapse;
+    font-size: 150%;
+    font-family: san-serif;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.field table td {
+    background-color: rgb(250, 171, 204);
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+    min-height: 60px;
+    border: 1px solid rgb(38, 37, 37);    
+}
+
+.buttonContainer {
+    border: solid black 1px;
+    width: 98%;
+    height: 5vh; 
+    display: flex;
+    justify-content: center;
+}
+
+.startButton {
+
+    display: inline-block;
+    outline: 0;
+    border:0;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    color: #000;
+    background: #fff;
+    line-height: 30px;
+    border-radius: 40px;
+    padding: 20px;
+    font-size: 30px;
+    font-weight: 600;
+    box-shadow: rgb(255, 198, 0) -2px -2px 0px 2px, rgb(246, 84, 174) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
+    transition: all 0.2s;
+}
+.startButton:hover {
+    box-shadow: rgb(246, 84, 174) -2px -2px 0px 2px, rgb(255, 198, 0) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
+    transform: scale(1.01);
+}
