@@ -39,6 +39,8 @@ function createTable() {
     }
     return table;
 }
+
+
 // place bombs in table
 function placeBombs() {
     let (i, rows = []);
@@ -71,8 +73,125 @@ function placeSingleBomb(bombs) {
         placeSingleBomb(bombs);
     }
 }
-// hit bomb "you loose"
-// // if number is next to bomb flag function 
+
+// eventlisteners for clicks
+function addCellListeners(td, i, j) {
+    td.addEventListener('mousedown', function(event) {
+        if (!components.alive) {
+            return;
+        }
+        components.mousewhiches += event.which;
+        if (event.which === 3) {
+            return;
+        }
+        if (this.flagged) {
+            return;
+        }
+        this.style.backgroundColor = 'lightpink';
+    });
+
+    td.addEventListener('mouseup', function(event) {
+      
+        if (!components.alive) {
+            return;
+        }
+
+        if (this.clicked && components.mousewhiches == 4) {
+            performMassClick(this, i, j);
+        }
+
+        components.mousewhiches = 0;
+        
+        if (event.which === 3) {
+           
+            if (this.clicked) {
+                return;
+            }
+            if (this.flagged) {
+                this.flagged = false;
+                this.textContent = '';
+            } else {
+                this.flagged = true;
+                this.textContent = components.flag;
+            }
+
+            event.preventDefault();
+            event.stopPropagation();
+          
+            return false;
+        } 
+        else {
+            handleCellClick(this, i, j);
+        }
+    });
+
+    td.oncontextmenu = function() { 
+        return false; 
+    };
+}
+
+function handleCellClick(cell, i, j) {
+    if (!components.alive) {
+        return;
+    }
+
+    if (cell.flagged) {
+        return;
+    }
+
+    cell.clicked = true;
+
+    if (components.bombs[i][j]) {
+        cell.style.color = 'red';
+        cell.textContent = components.bomb;
+        gameOver();
+        
+    }
+    else {
+        cell.style.backgroundColor = 'lightsalmon';
+        num_of_bombs = adjacentBombs(i, j);
+        if (num_of_bombs) {
+            cell.style.color = components.colors[num_of_bombs];
+            cell.textContent = num_of_bombs;
+        } 
+        else {
+            clickAdjacentBombs(i, j);
+        }
+    }
+}
+
+
+
+// find bombs and flag them 
+function adjacentBombs(row, col) {
+    var i, j, num_of_bombs;
+    num_of_bombs = 0;
+
+    for (i=-1; i<2; i++) {
+        for (j=-1; j<2; j++) {
+            if (components.bombs[row + i] && components.bombs[row + i][col + j]) {
+                num_of_bombs++;
+            }
+        }
+    }
+    return num_of_bombs;
+}
+
+function adjacentFlags(row, col) {
+    let (i, j, num_flags);
+    num_flags = 0;
+
+    for (i=-1; i<2; i++) {
+        for (j=-1; j<2; j++) {
+            cell = document.getElementById(cellID(row + i, col + j));
+            if (!!cell && cell.flagged) {
+                num_flags++;
+            }
+        }
+    }
+}        
+// click through field
+
 // all flags placed correctly "you win"
 // reset to first funtion
 // repeat for player two 
