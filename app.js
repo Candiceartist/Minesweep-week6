@@ -9,9 +9,9 @@ const mineFields = {
 }
 
 var components = {
-    num_of_rows : 12,
-    num_of_cols : 24,
-    num_of_bombs : 55,
+    num_of_rows : 6,
+    num_of_cols : 12,
+    num_of_bombs : 10,
     bomb : '💣',
     alive : true,
     colors : {1: 'blue', 2: 'green', 3: 'red', 4: 'purple', 5: 'maroon', 6: 'turquoise', 7: 'black', 8: 'grey'}
@@ -311,7 +311,7 @@ function addCellListeners(td, i, j) {
         if (this.flagged) {
             return;
         }
-        this.style.backgroundColor = 'lightGrey';
+        this.style.backgroundColor = 'lightpink';
     });
 
     td.addEventListener('mouseup', function(event) {
@@ -372,7 +372,7 @@ function handleCellClick(cell, i, j) {
         
     }
     else {
-        cell.style.backgroundColor = 'lightGrey';
+        cell.style.backgroundColor = 'lightcoral';
         num_of_bombs = adjacentBombs(i, j);
         if (num_of_bombs) {
             cell.style.color = components.colors[num_of_bombs];

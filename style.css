@@ -71,7 +71,7 @@ h2, h3{
     justify-content: center;
 }
 
-.button {
+button {
 
     display: inline-block;
     outline: 0;
@@ -89,7 +89,7 @@ h2, h3{
     box-shadow: rgb(255, 198, 0) -2px -2px 0px 2px, rgb(246, 84, 174) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
     transition: all 0.2s;
 }
-.button:hover {
+button:hover {
     box-shadow: rgb(246, 84, 174) -2px -2px 0px 2px, rgb(255, 198, 0) 0px 0px 0px 4px, rgba(0, 0, 0, 0.05) 0px 0px 2px 7px;
     transform: scale(1.01);
 }
@@ -104,10 +104,10 @@ h2, h3{
 }
 
 #field table td {
-    background-color: rgb(195, 195, 195);
+    background-color: lightgoldenrodyellow;
     width: 30px;
     min-width: 30px;
     height: 30px;
     min-height: 30px;
-    border: 1px solid black;    
+    border: 1px solid rgb(184, 96, 7);    
 }
