@@ -42,7 +42,7 @@ h2, h3{
     display: inline-block;
 }
 
-.field_table td {
+.field_table, th, td {
     background-color: rgb(250, 171, 204);
     width: 60px;
     min-width: 60px;
