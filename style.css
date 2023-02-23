@@ -87,8 +87,11 @@ justify-content: center;
 }
 
 .bottomContainer {
- border: solid black 1px;
+ /* border: solid black 1px; */
  height: 150px;
  display: flex;
  justify-content: center;
+}
+.winner {
+    margin-left: 25px;
 }

@@ -448,6 +448,7 @@ function reload(){
 window.addEventListener('load', function() {
     document.getElementById('lost').style.display="none";
     startGame();
+    findWinner();
 });
 
 // counter for players
@@ -462,4 +463,12 @@ const player1Counter = () => {
 const player2Counter = () => {
     let points = document.querySelector('.points2')
  points.innerHTML = count++;
+}
+const findWinner = () => {
+   let winner = document.querySelector('.winner')
+   if (player1Counter > player2Counter) {
+   winner.innerHTML = "'Player1 Wins!'"
+   } else {
+    winner.innerHTML = "'Player2 Wins!'"
+   }
 }
