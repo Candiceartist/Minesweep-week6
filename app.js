@@ -453,22 +453,30 @@ window.addEventListener('load', function() {
 
 // counter for players
 
-let count = 1;
+let count1 = 1;
+let count2 = 1;
 
 const player1Counter = () => {
     let points = document.querySelector('.points')
- points.innerHTML = count++;
+ points.innerHTML = count1++;
 }
 
 const player2Counter = () => {
     let points = document.querySelector('.points2')
- points.innerHTML = count++;
+ points.innerHTML = count2++;
 }
+
+let finalScore = {
+    player1: player1Counter.textContent,
+    player2: player2Counter.textContent,
+}
+
 const findWinner = () => {
    let winner = document.querySelector('.winner')
-   if (player1Counter > player2Counter) {
+   if (finalScore.player1 > finalScore.player2) {
    winner.innerHTML = "'Player1 Wins!'"
    } else {
     winner.innerHTML = "'Player2 Wins!'"
    }
 }
+

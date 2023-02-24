@@ -76,6 +76,7 @@ button:hover {
 }
 .games {
 /* border: solid black 2px; */
+margin-top: 30px;
 display: flex;
 justify-content: center;
 }
@@ -83,7 +84,19 @@ justify-content: center;
     /* border: solid saddlebrown 1px; */
     width: 60px;
     height: 120px;
-    margin: 10px;
+    margin: 20px;
+}
+#points {
+    margin-left: 15px;
+}
+#points2 {
+    margin-left: 10px;
+}
+.points {
+    margin-left: 6px;
+}
+.points2 {
+    margin-left: 8px;
 }
 
 .bottomContainer {
