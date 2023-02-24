@@ -9,4 +9,5 @@ If a mine is exposed you will lose game.
 Take turns and challenge a second player to do the same.
 Oldest player starts.
 Use respective player buttons to add score after each turn.
+Each Player can decide to go one or two turns consecutivey to gain the most points.
 Player to make the most turns before finding an explosion or clearing the field wins!
