@@ -475,15 +475,15 @@ const player2Counter = () => {
 
 
 const findWinner = () => {
-    console.log(finalScore.player1)
+   console.log(finalScore.player1, finalScore.player2)
    let winner = document.querySelector('.winner')
    if (finalScore.player1 > finalScore.player2) {
    winner.innerHTML = "'Player1 Wins!'"
-   } else {  
-   winner.innerHTML = "'Player2 Wins!'"
-//    } else {
-//     winner.innerHTML = "'NICE SWEEP'"
-//    }
+   } else if (finalScore.player1 < finalScore.player2) {
+    winner.innerHTML = "'Player2 Wins!'" 
+   } else {
+    winner.innerHTML = "'NICE SWEEP'"
+   }
 }
-}
+
 
