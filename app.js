@@ -251,13 +251,13 @@ let finalScore = {
 const player1Counter = () => {
     let points1 = document.querySelector('.points')
  points1.innerHTML = count1++;
- finalScore.player1 = Number(document.querySelector('.points').textContent);
+ finalScore.player1 = parseInt(document.querySelector('.points').textContent);
 }
 
 const player2Counter = () => {
     let points = document.querySelector('.points2')
  points.innerHTML = count2++;
- finalScore.player2 = Number(document.querySelector('.points2').textContent);
+ finalScore.player2 = parseInt(document.querySelector('.points2').textContent);
 }
 
 
