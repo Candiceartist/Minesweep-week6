@@ -244,8 +244,8 @@ let count1 = 1;
 let count2 = 1;
 
 let finalScore = {
-    player1: parseInt(document.querySelector('.points').textContent),
-    player2: parseInt(document.querySelector('.points2').textContent),
+    player1: 0,
+    player2: 0,
 }
 
 const player1Counter = () => {
