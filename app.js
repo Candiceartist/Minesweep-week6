@@ -9,6 +9,7 @@ let p2Score = 0
 
 
 
+
 const mineFields = {
    rows:3,
    collumns:6,
@@ -243,8 +244,8 @@ let count1 = 1;
 let count2 = 1;
 
 let finalScore = {
-    player1: Number(document.querySelector('.points').textContent),
-    player2: Number(document.querySelector('.points2').textContent),
+    player1: parseInt(document.querySelector('.points').textContent),
+    player2: parseInt(document.querySelector('.points2').textContent),
 }
 
 const player1Counter = () => {
@@ -261,7 +262,7 @@ const player2Counter = () => {
 
 
 const findWinner = () => {
-   console.log(finalScore.player1, finalScore.player2)
+//    console.log(finalScore.player1, finalScore.player2)
    let winner = document.querySelector('.winner')
    if (finalScore.player1 > finalScore.player2) {
    winner.innerHTML = "'Player1 Wins!'"
