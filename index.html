@@ -3,13 +3,32 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Mini Game</title>
+    <title></title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <div class="Main"></div>
+  <div id="box">
+        <h2>MINESWEEPER!</h2><hr><br><br></div> 
+        <div class="intro">Click on a random square while avoiding the explosives.
+         If the first player clicks on a safe area, the square will either  be blank or will contain a number from 1 to 8 showing how many explosives are near that particular square. Your mission if you decide to accept it is to expose all blank sqaures. If you fail the mission is over. <br><br>Take turns with a friend for extra suspense. Hit your respective button after each turn. Each Player can decide to go one or two turns consecutivey to gain the most points. The player with the most points at the end of game wins!</div>
+        <div class="games">
+            <div class="counter"><div><h2 class="points">0</h2><button onclick="player1Counter()" class="player"></button></div><h3>"P1"</h3></div>
+            <div id="field"></div>
+            <div class="counter"><div ><h2 class="points2">0</h2><button onclick="player2Counter()" class="player"></button></div><h3 >"P2"</h3></div>
+        </div>  
+        <br><br>
+        <div class="bottomContainer">
+            <div id="lost" style="display: none;">
+             <h3>Explosion! Mission Over!</h3><h2 class="winner">"Finished"</h2>
+             <button id="new-game-button" type="button" onclick="reload()">Start Over</button>
+           </div>
+        </div>
+           
+         
+    </div>
+ 
+
     <script src="app.js" async defer></script>
   </body>
 </html>
