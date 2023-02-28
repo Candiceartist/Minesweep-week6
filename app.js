@@ -256,6 +256,8 @@ const player2Counter = () => {
 
 const findWinner = () => {
    let winner = document.querySelector('.winner')
+   let nowShake = document.querySelector('.games')
+    nowShake.classList.toggle('shake')
    if (player1Counter > player2Counter) {
    winner.innerHTML = "'Player1 Wins!'"
    } else if (player1Counter < player2Counter) {
@@ -263,4 +265,5 @@ const findWinner = () => {
    } else {
     winner.innerHTML = "'NICE SWEEP'"
    }
+
 }
