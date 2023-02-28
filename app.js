@@ -23,6 +23,8 @@ var components = {
 function startGame() {
     components.bombs = placeBombs();
     document.getElementById('field').appendChild(createTable());
+    let nowShake = document.querySelector('h1')
+    nowShake.classList.toggle('shake')
 }
 
 function placeBombs() {
@@ -267,3 +269,4 @@ const findWinner = () => {
    }
 
 }
+
