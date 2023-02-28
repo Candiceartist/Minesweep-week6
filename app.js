@@ -96,6 +96,9 @@ function addCellListeners(td, i, j) {
     });
 
     td.addEventListener('mouseup', function(event) {
+
+        let nowShake = document.querySelector('.games')
+        nowShake.classList.toggle('shake')
       
         if (!components.alive) {
             return;
@@ -150,7 +153,6 @@ function handleCellClick(cell, i, j) {
         cell.style.color = 'red';
         cell.textContent = components.bomb;
         gameOver();
-        
     }
     else {
         cell.style.backgroundColor = 'lightcoral';
