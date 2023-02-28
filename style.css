@@ -15,6 +15,7 @@ h1 {
     color: rgb(62, 61, 61);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: xx-large;
+    padding-top: 20px;
 }
 
 h2, h3{
