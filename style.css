@@ -135,6 +135,10 @@ justify-content: center;
     }
   }
 
+  .wave {
+    animation: wave 4s infinite alternate-reverse;
+}
+
   @keyframes wave {
     0% {
         transform: translate(0px, 10px);
