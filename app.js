@@ -1,44 +1,11 @@
 // create mine field start active tiles active bombs alive or dead text inside
-let count1 = 1;
-let count2 = 1;
-
-// let finalScore = {
-//     player1: 0,
-//     player2: 0,
-// }
-
-const player1Counter = () => {
-    let points1 = document.querySelector('.points')
- points1.innerHTML = count1++;
- parseInt(document.querySelector('.points').textContent);
- console.log(points1)
-}
-
-const player2Counter = () => {
-    let points = document.querySelector('.points2')
- points.innerHTML = count2++;
- parseInt(document.querySelector('.points2').textContent);
- console.log(points)
-}
-
-const findWinner = () => {
-//    console.log(finalScore.player1, finalScore.player2)
-   let winner = document.querySelector('.winner')
-   if (player1Counter > player2Counter) {
-   winner.innerHTML = "'Player1 Wins!'"
-   } else if (player1Counter < player2Counter) {
-    winner.innerHTML = "'Player2 Wins!'" 
-   } else {
-    winner.innerHTML = "'NICE SWEEP'"
-   }
-}
 
 
 
 const mineFields = {
    rows:3,
    collumns:6,
-   bombs: 2,
+   bombs: 5,
    bomb: "&#x1F4A3",
    alive: "true",
    colors: {1: 'blue', 2: 'green', 3: 'red', 4: 'purple', 5: 'maroon', 6: 'turquoise', 7: 'black', 8: 'grey'}
@@ -263,10 +230,41 @@ window.addEventListener('load', function() {
     findWinner();
 });
 
+// counter for players
 
 
+let count1 = 1;
+let count2 = 1;
+
+let finalScore = {
+    player1: Number(document.querySelector('.points').textContent),
+    player2: Number(document.querySelector('.points2').textContent),
+}
+
+const player1Counter = () => {
+    let points1 = document.querySelector('.points')
+ points1.innerHTML = count1++;
+ finalScore.player1 = Number(document.querySelector('.points').textContent);
+}
+
+const player2Counter = () => {
+    let points = document.querySelector('.points2')
+ points.innerHTML = count2++;
+ finalScore.player2 = Number(document.querySelector('.points2').textContent);
+}
 
 
+const findWinner = () => {
+   console.log(finalScore.player1, finalScore.player2)
+   let winner = document.querySelector('.winner')
+   if (finalScore.player1 > finalScore.player2) {
+   winner.innerHTML = "'Player1 Wins!'"
+   } else if (finalScore.player1 < finalScore.player2) {
+    winner.innerHTML = "'Player2 Wins!'" 
+   } else {
+    winner.innerHTML = "'NICE SWEEP'"
+   }
+}
 
 
 
