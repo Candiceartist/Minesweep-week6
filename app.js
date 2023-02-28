@@ -232,40 +232,35 @@ window.addEventListener('load', function() {
 
 // counter for players
 
-
 let count1 = 1;
 let count2 = 1;
 
-let finalScore = {
-    player1: Number(document.querySelector('.points').textContent),
-    player2: Number(document.querySelector('.points2').textContent),
-}
+// let finalScore = {
+//     player1: 0,
+//     player2: 0,
+// }
 
 const player1Counter = () => {
     let points1 = document.querySelector('.points')
  points1.innerHTML = count1++;
- finalScore.player1 = Number(document.querySelector('.points').textContent);
+ parseInt(document.querySelector('.points').textContent);
+ console.log(points1)
 }
 
 const player2Counter = () => {
-    let points = document.querySelector('.points2')
- points.innerHTML = count2++;
- finalScore.player2 = Number(document.querySelector('.points2').textContent);
+    let points2 = document.querySelector('.points2')
+ points2.innerHTML = count2++;
+ parseInt(document.querySelector('.points2').textContent);
+ console.log(points2)
 }
 
-
 const findWinner = () => {
-   console.log(finalScore.player1, finalScore.player2)
    let winner = document.querySelector('.winner')
-   if (finalScore.player1 > finalScore.player2) {
+   if (player1Counter > player2Counter) {
    winner.innerHTML = "'Player1 Wins!'"
-   } else if (finalScore.player1 < finalScore.player2) {
+   } else if (player1Counter < player2Counter) {
     winner.innerHTML = "'Player2 Wins!'" 
    } else {
     winner.innerHTML = "'NICE SWEEP'"
    }
 }
-
-
-
-
