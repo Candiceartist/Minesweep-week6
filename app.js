@@ -14,7 +14,7 @@ const mineFields = {
 var components = {
     num_of_rows : 6,
     num_of_cols : 12,
-    num_of_bombs : 10,
+    num_of_bombs : 5,
     bomb : '💣',
     alive : true,
     colors : {1: 'blue', 2: 'green', 3: 'red', 4: 'purple', 5: 'maroon', 6: 'turquoise', 7: 'black', 8: 'grey'}
